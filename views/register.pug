@@ -1,0 +1,35 @@
+//- using pug as a template engine and linking it with Node JS using Express Module 
+doctype html
+head
+  meta(charset='UTF-8')
+  link(rel='stylesheet' href='/static/register.css')
+  script(src='../index.js')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+.container
+  .title Registration
+  .content
+    form(action='/contact',method="post")
+      .user-details
+        .input-box
+          span.details Full Name
+          input(type='text' placeholder='Enter your name' required='' name='fullname')
+        .input-box
+          span.details Username
+          input(type='text' placeholder='Enter your username' required='' name='username')
+        .input-box
+          span.details Email
+          input(type='email' placeholder='Enter your email' required='' name='email')
+        .input-box
+          span.details Phone Number
+          input(type='number' placeholder='Enter your number' required='' name='phonenum')
+        .input-box
+          span.details Password
+          input(type='password' placeholder='Enter your password' required='' name='pass')
+        .input-box
+          span.details Confirm Password
+          input(type='password' placeholder='Confirm your password' required='' name='cpass')
+        .button
+            input(type='submit' value='Register' onclick='passckeck()')
+        .button
+            input(type='delete' value='Delete' onclick='del()')
+        
